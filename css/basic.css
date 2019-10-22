@@ -1,0 +1,27 @@
+body{
+    background-color: lightsteelblue;
+}
+
+
+#homepage{
+    /*background-color: black;*/
+    background-image: url("../pictures/lots_of_colors.jpg");
+    height: auto;
+    width: 100%;
+}
+
+#menubar{
+    width:100%;
+    height: 5%;
+    position: absolute;
+    background-color: antiquewhite;
+}
+
+.menubuton{
+    position: center;
+}
+
+/*
+.menubuton:hover{
+    font-size: larger;
+}*/
