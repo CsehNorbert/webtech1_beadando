@@ -27,10 +27,12 @@ body{
 }
 
 .leftcontent{
-    /*width: 15%;*/
+    /*width: 100%;*/
     display: flex;
     flex-direction: column;
+    /*flex 3%;*/
     background-color: lightsteelblue;
+    margin-left: -1%;
     margin-right: 1%;
     padding: 20px;
     font-size: 30px;
@@ -59,6 +61,8 @@ body{
 
 #menubar {
     display: flex;
+    margin-top: -2%;
+    margin-left: -2%;
     background-color: antiquewhite;
 }
 
