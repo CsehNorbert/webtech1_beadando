@@ -6,8 +6,6 @@ body{
 #homepage{
     /*background-color: black;*/
     background-image: url("../pictures/lots_of_colors.jpg");
-    height: auto;
-    width: 100%;
 }
 
 /*
@@ -22,37 +20,33 @@ body{
     position: center;
 }*/
 
-.page{
+#page{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 30px;
+    height: 90vh;
 }
 
 .leftcontent{
-    /*width: 100%;*/
-    display: flex;
-    flex-direction: column;
-    /*flex 3%;*/
     background-color: lightsteelblue;
-    margin-left: -1%;
-    margin-right: 1%;
     padding: 20px;
-    font-size: 30px;
+    order: 1;
+    flex: 1 1 100px;
 }
 
 .maincontent{
-    display: flex;
-    flex-direction: column;
-    background-color: lightsteelblue;
+    background-color: yellow;
     font-family: "Arial Black";
+    order: 2;
+    flex: 9 1 600px; /*flex-grow, flex-shrink, felx-base*/
 }
 
 .rightcontent{
-    /*width: 20%;*/
-    display: flex;
-    flex-direction: column;
-    background-color: lightsteelblue;
-    margin-left: 1%;
+    background-color: darkgreen;
     padding: 20px;
-    font-size: 30px;
+    order: 3;
+    flex: 1 1 100px;
 }
 
 .content > h1 {
@@ -61,13 +55,14 @@ body{
 
 #menubar {
     display: flex;
-    margin-top: -2%;
-    margin-left: -2%;
+    justify-content: left;
+    height: 10vh;
     background-color: antiquewhite;
 }
 
-#menubar > div {
+.menubuton {
     background-color: rgb(90%,80%,80%);
+    align-items: center;
     margin: 10px;
     padding: 20px;
     font-size: 30px;
