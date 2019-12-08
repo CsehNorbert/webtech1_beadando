@@ -53,8 +53,8 @@ function carsLoad() {
         table.append("<tr>" + "<th>Manufacturer</th><th> Name</th><th>Consumption</th><th>Horsepower</th><th>Year</th><th>Color</th><th>Available</th>" + "</tr>");
         $(".maincontent").append(table);
 
-        for (let car of everycar){
-            table.append(   "<tr>" +
+        for (let car of everycar) {
+            table.append("<tr>" +
                 "<td ><a>" + car.manufacturer + "</a></td>" +
                 "<td>" + car.name + "</td>" +
                 "<td>" + car.consumption + "</td>" +
@@ -66,12 +66,10 @@ function carsLoad() {
 
             let manufacturer = car.manufacturer;
             $("a:last").click(
-                function(){ listingManufacturersCar(manufacturer)
-            });
-
+                function () {
+                    listingManufacturersCar(manufacturer)
+                });
         }
-
-
     });
 }
 
@@ -80,10 +78,23 @@ function listingManufacturersCar(manufacturer) {
     document.cookie = "name=" + manufacturer;
     $.get("manufacturer", function (cars) {
         let everycar = cars;
+        let table =  $("<table></table>");
+        table.append("<tr>" + "<th>Manufacturer</th><th> Name</th><th>Consumption</th><th>Horsepower</th><th>Year</th><th>Color</th><th>Available</th>" + "</tr>");
+        $(".maincontent").append(table);
+
         for (let car of everycar) {
-                $(".maincontent").append(car.name + " " + car.consumption + " " + car.color + " "
-                    + car.manufacturer + " " + car.year + " " + car.available + " " + car.horsepower + "<br>");
+            table.append(   "<tr>" +
+                "<td ><a>" + car.manufacturer + "</a></td>" +
+                "<td>" + car.name + "</td>" +
+                "<td>" + car.consumption + "</td>" +
+                "<td>" + car.horsepower + " hp </td>" +
+                "<td>" + car.year + "</td>" +
+                "<td>" + car.color + "</td>" +
+                "<td>" + car.available + "</td>" +
+                "</tr>");
+
         }
+        $(".maincontent").append(table);
     })}
 
 function addingCarPage(){
