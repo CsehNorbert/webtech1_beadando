@@ -1,52 +1,50 @@
-body{
-    /*background-color: lightsteelblue;*/
+td,th{
+    width:16%;
+    text-align: left;
 }
 
+th{
+    font-weight: bold;
+    font-style: oblique;
+    font-size: 22px;
+}
 
 #homepage{
     /*background-color: black;*/
-    background-image: url("../pictures/lots_of_colors.jpg");
+    background-image: url("../images/lots_of_colors.jpg");
 }
 
-/*
-#menubar{
-    width:100%;
-    height: 5%;
-    position: absolute;
-    background-color: antiquewhite;
-}*/
-/*
-.menubuton{
-    position: center;
-}*/
 
 #page{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    font-size: 30px;
+    font-size: 18px;
     height: 90vh;
 }
 
 .leftcontent{
-    background-color: lightsteelblue;
+    background-image: url("../images/left.jpg");
     padding: 20px;
     order: 1;
     flex: 1 1 100px;
+    opacity: 100%;
 }
 
 .maincontent{
-    background-color: yellow;
+    background-color: darkgray;
     font-family: "Arial Black";
     order: 2;
     flex: 9 1 600px; /*flex-grow, flex-shrink, felx-base*/
+
 }
 
 .rightcontent{
-    background-color: darkgreen;
+    background-image: url("../images/right.jpg");
     padding: 20px;
     order: 3;
     flex: 1 1 100px;
+    opacity: 100%;
 }
 
 .content > h1 {
@@ -57,17 +55,14 @@ body{
     display: flex;
     justify-content: left;
     height: 10vh;
-    background-color: antiquewhite;
+    background-color: black;
 }
 
 .menubuton {
-    background-color: rgb(90%,80%,80%);
+    cursor: pointer;
+    background: darkgray linear-gradient(black,gray,gray,black);
     align-items: center;
     margin: 10px;
     padding: 20px;
     font-size: 30px;
 }
-/*
-.menubuton:hover{
-    font-size: larger;
-}*/
